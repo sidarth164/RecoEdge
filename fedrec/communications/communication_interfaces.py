@@ -20,6 +20,8 @@ class AbstractComManager(ABC):
     @abstractmethod
     def close(self):
         pass
+
+
 @registry.load("communications", "ZeroMQ")
 class ZeroMQ(AbstractComManager):
     def __init__(self, is_subscriber=False):

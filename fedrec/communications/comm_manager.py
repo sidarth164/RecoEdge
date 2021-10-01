@@ -43,7 +43,7 @@ class CommunicationManager:
         # message includes reciever id and sender id
         self.com_manager.send(message)
         if block:
-            return await self.com_manager.recieve()
+            return await self.com_manager.recieve(message.request_id)
         else:
             return
 
@@ -52,7 +52,7 @@ class CommunicationManager:
         future = loop.create_future()
         self.message_handler_dict[request_id] = future
         return await future
-        
+
     def finish(self):
         self.loop.stop()
         self.com_manager.close()
