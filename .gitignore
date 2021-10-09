@@ -95,6 +95,9 @@ StyleCopReport.xml
 *.svclog
 *.scc
 
+# Files built by Pycharm
+*.idea
+
 # Chutzpah Test files
 _Chutzpah*
 
