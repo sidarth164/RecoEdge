@@ -1,13 +1,9 @@
 import attr
-from thespian.actors import Actor, ActorSystem, WakeupMessage
+from thespian.actors import Actor, WakeupMessage
 
 from fedrec.workers.Orchestrator import Orchestrator
 from fedrec.workers.Reception import Reception
 from fedrec.workers.Trainer import Trainer
-
-
-class SamplingStrategy():
-    pass
 
 
 # noinspection PyAttributeOutsideInit
